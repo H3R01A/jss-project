@@ -21,7 +21,7 @@ export default function AspectRatio() {
     });
 
     const data = await response.json();
-    console.log(data);
+
     if (data.canBeatYouWithLevel === "true" || data.canBeatYouWithSacredWeapon === "true") {
       console.log('player won');
       setPlayerWon(true);
@@ -37,7 +37,7 @@ export default function AspectRatio() {
       <h1>On your quest, you encounter a Minotaur</h1>
       <p>Enter your level and weapon to see if you can beat it</p>
       <input
-        placeholder="enter player level here"
+        placeholder="Enter player level here"
         value={playerLevel}
         onChange={(e) => setPlayerLevel(e.target.value)}
       ></input>
@@ -50,7 +50,7 @@ export default function AspectRatio() {
         <option value="sacred bow">Sacred Bow</option>
       </select>
       <button className="outline-sky-300 outline-2" onClick={handleClick}>
-        Battle
+        Battle the Minotaur
       </button>
       {playerInput && (
         <p>
